@@ -106,7 +106,7 @@ abstract class _AddBookingStore with Store {
     double _hr = _timeDiff.truncateToDouble();
     double _minute = (_timeDiff - _timeDiff.truncate()) * 60;
 
-    print('Here your Happy $_hr Hour and also $_minute min');
-    updateDuration(_hr, _minute);
+    print('Here your Happy $_hr Hour and also ${_minute.roundToDouble()} min');
+    updateDuration(_hr, _minute.roundToDouble());
   }
 }
